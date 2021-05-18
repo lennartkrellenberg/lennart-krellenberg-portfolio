@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 [data-theme="dark"] {
   --background-color: #292E34;
@@ -44,9 +43,17 @@ html {
   text-decoration: underline;
 }
 
+.blue {
+  color: #41B6E6;
+}
+
+.pink {
+  color: #DB3EB1;
+}
 .heroSection {
   height: 100vh;
 }
+
 
 .heroContent {
   height: 100%;
@@ -59,8 +66,42 @@ html {
 }
 
 .heroLeft {
-  
+  h3 {
+    font-size: 2.3rem;
+    font-family: "poppins"}
+
+  h2 {
+    font-size: 2.7rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  button {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    height: 70px;
+    width: 250px;
+    border-radius: 22px;
+    color: var(--text-color);
+    font-size: 1.35rem;
+
+  }
+
+  .btn1 {
+    background-color: #41B6E6;
+    border-color: #41B6E6;
+    margin-right: 50px;
+
+  }
+
+  .btn2 {
+    background-color: #DB3EB1;
+    border-color: #DB3EB1;
+  }
+
+ 
 }
+
+
 .heroRight {
   margin-right: 0;
   margin-left: auto;
@@ -68,8 +109,96 @@ html {
   margin-top: auto;
 }
 
-.btn1 {
+@media only screen and (max-width: 1200px) {
 
+
+  html {
+    font-size: 70%;
+  }
+
+  
+  .heroSection {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .heroContent {
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+  }  
+
+  .heroLeft {
+    margin-top: 10vh;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .heroRight {
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: auto;  }
+
+    .person {
+
+      width: 35vw ; 
+      height: auto ;
+    }
 }
 
-.btn2 {}
+
+
+
+@media only screen and (max-width: 750px) {
+  html {
+    font-size: 65%;
+  }
+
+  .heroContent {
+    margin-top: 150px;
+  }
+
+  .heroLeft {
+    margin-bottom: 70px;
+    button {
+      width: 170px;
+      height: 50px;
+      border-radius: 22px;
+    }
+
+    
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heroContent {
+    margin-top: 150px;
+  }
+
+  .heroLeft {
+    margin-bottom: 70px;
+    button {
+      width: 140px;
+      height: 45px;
+      border-radius: 22px;
+    }
+
+    
+  }
+  
+}
