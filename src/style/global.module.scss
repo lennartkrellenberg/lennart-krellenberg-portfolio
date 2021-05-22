@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 [data-theme="dark"] {
-  --background-color: #292E34;
+  --background-color: #292e34;
   --text-color: #fff;
 }
 
@@ -11,8 +10,6 @@
   --text-color: #121212;
 }
 
-
- 
 html {
   scroll-behavior: smooth;
   background-color: var(--background-color);
@@ -26,9 +23,7 @@ html {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-
 .wrapper {
-  
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 10px;
@@ -44,63 +39,60 @@ html {
 }
 
 .blue {
-  color: #41B6E6;
+  color: #41b6e6;
 }
 
 .pink {
-  color: #DB3EB1;
+  color: #db3eb1;
 }
 .heroSection {
   height: 100vh;
 }
 
-
 .heroContent {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto-fit, 1fr;
 }
 
 .heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   h3 {
     font-size: 2.3rem;
-    font-family: "poppins"}
+    font-family: "poppins";
+  }
 
   h2 {
     font-size: 2.7rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   button {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin-top: 30px;
     height: 70px;
     width: 250px;
     border-radius: 22px;
     color: var(--text-color);
     font-size: 1.35rem;
-
   }
 
   .btn1 {
-    background-color: #41B6E6;
-    border-color: #41B6E6;
+    background-color: #41b6e6;
+    border-color: #41b6e6;
     margin-right: 50px;
-
   }
 
   .btn2 {
-    background-color: #DB3EB1;
-    border-color: #DB3EB1;
+    background-color: #db3eb1;
+    border-color: #db3eb1;
   }
-
- 
 }
-
 
 .heroRight {
   margin-right: 0;
@@ -110,13 +102,10 @@ html {
 }
 
 @media only screen and (max-width: 1200px) {
-
-
   html {
     font-size: 70%;
   }
 
-  
   .heroSection {
     height: 100%;
 
@@ -130,8 +119,7 @@ html {
     text-align: center;
     align-items: center;
     justify-content: center;
-
-  }  
+  }
 
   .heroLeft {
     margin-top: 10vh;
@@ -143,21 +131,17 @@ html {
   }
 
   .heroRight {
-
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
-    margin-top: auto;  }
+    margin-top: auto;
+  }
 
-    .person {
-
-      width: 35vw ; 
-      height: auto ;
-    }
+  .person {
+    width: 35vw;
+    height: auto;
+  }
 }
-
-
-
 
 @media only screen and (max-width: 750px) {
   html {
@@ -166,6 +150,8 @@ html {
 
   .heroContent {
     margin-top: 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 
   .heroLeft {
@@ -175,10 +161,7 @@ html {
       height: 50px;
       border-radius: 22px;
     }
-
-    
   }
-  
 }
 
 @media only screen and (max-width: 450px) {
@@ -197,8 +180,5 @@ html {
       height: 45px;
       border-radius: 22px;
     }
-
-    
   }
-  
 }
