@@ -2,6 +2,8 @@ import * as React from "react"
 import * as style from "../style/global.module.scss"
 import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import Navbar from "../components/navbar/Navbar"
 
 
 
@@ -9,13 +11,24 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
 
+
+
   return (
     <div className={style.wrapper}>
       <Helmet>
 
         <script type="text/javascript">
+
+        </script>
+
+        <script type="text/javascript">
           {
-            document.documentElement.setAttribute("data-theme", "dark")}
+            document.documentElement.setAttribute("data-theme", "dark")
+
+
+          }
+
+
 
 
         </script>
@@ -26,7 +39,10 @@ const IndexPage = () => {
       <section className={style.heroSection}>
         <div className={style.heroContent}>
           <div className={style.heroTop}>
-            <div className={style.navbar}></div>
+            <div className={style.navbar}>
+              <Navbar></Navbar>
+
+            </div>
           </div>
           <div className={style.heroLeft}>
             <h3>Hi, I'm Lennart <span role="img" aria-label="shake-hand">👋🏻</span></h3>
@@ -40,6 +56,7 @@ const IndexPage = () => {
 
           <div className={style.heroRight}>
             <StaticImage className={style.person} src="../images/person.svg"
+
               alt="Person SVG"
               placeholder="none"
 
@@ -63,5 +80,8 @@ function changeBackground() {
   document.documentElement.setAttribute("data-theme", switchToTheme);
 
 }
+
+
+
 
 export default IndexPage
