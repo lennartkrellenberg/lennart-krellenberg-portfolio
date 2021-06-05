@@ -17,21 +17,7 @@ const IndexPage = () => {
     <div className={style.wrapper}>
       <Helmet>
 
-        <script type="text/javascript">
 
-        </script>
-
-        <script type="text/javascript">
-          {
-            document.documentElement.setAttribute("data-theme", "dark")
-
-
-          }
-
-
-
-
-        </script>
 
 
       </Helmet>
