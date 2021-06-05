@@ -10,6 +10,8 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 
   :after {
     position: absolute;
@@ -38,14 +40,17 @@ const NavItem = styled(Link)`
   }
 `
 const NavbarLinks = () => {
-    return (
-        <>
-            <NavItem to="/">About</NavItem>
-            <NavItem to="/404">Services</NavItem>
-            <NavItem to="/">Gallery</NavItem>
-            <NavItem to="/404">Contact</NavItem>
-        </>
-    )
+  return (
+    <>
+      <NavItem to="#home">Home</NavItem>
+      <NavItem to="#work">Work</NavItem>
+      <NavItem to="#contact">Contact</NavItem>
+
+
+
+
+    </>
+  )
 }
 
 export default NavbarLinks

@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-[data-theme="dark"] {
+:root {
   --background-color: #292e34;
   --text-color: #fff;
-}
-
-[data-theme="light"] {
-  --background-color: #fff;
-  --text-color: #121212;
 }
 
 html {
@@ -63,64 +58,88 @@ html {
   width: 100%;
 }
 
-.navbar {
+.brand {
+  pointer-events: none;
+  user-select: none;
   display: flex;
+  align-items: center;
   flex-direction: row;
-  min-height: 15vh;
   width: 100%;
+  text-transform: none !important;
+  font-family: "Roboto", sans-serif;
 
-  .brand {
-    pointer-events: none;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-    .logo {
-      width: 117px;
-      height: 85px;
-    }
-
-    .brandRight {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 20px;
-    }
+  .logo {
+    width: 117px;
+    height: 85px;
   }
 
-  .navLinks {
-    align-self: center;
-    margin-right: 0px;
-    margin-left: auto;
+  .brandRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
 
-    .link {
-      color: white;
-      font-weight: 700;
-      margin: 0 30px;
-      text-decoration: none;
+    p {
+      margin-top: 7px;
     }
   }
 }
 
-.buttonToggle {
-  position: absolute;
-  top: 5.5rem;
-  right: 2.5rem;
-  align-self: center;
-  margin-right: 0px;
-  margin-left: auto;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+#work {
+  padding: 100px 0;
+  min-height: 100vh;
 
-  .bar {
-    height: 3px;
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+  }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  .project {
     width: 100%;
-    background-color: white;
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    .projectTxt {
+      display: flex;
+      flex-direction: column;
+      width: 700px;
+
+      h4 {
+        margin: 10px 0;
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        width: 500px;
+      }
+
+      button {
+        font-family: "Roboto", sans-serif;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        color: var(--text-color);
+        background-color: #41b6e6;
+        border-color: #41b6e6;
+        font-size: 1.35rem;
+        align-self: flex-start;
+        margin-top: 60px;
+      }
+    }
+
+    .projectImg {
+      height: 350px;
+      width: 700px;
+      background-color: black;
+      border-radius: 50px;
+    }
   }
 }
 
@@ -140,8 +159,6 @@ html {
   }
 
   .brand {
-    margin-top: 20px;
-
     .brandRight {
       display: none !important;
     }
@@ -252,11 +269,21 @@ html {
     width: 35vw;
     height: auto;
   }
+
+  .projectImg {
+    height: 300px !important;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .heroLeft button {
     width: 200px;
+  }
+
+  .projectTxt {
+    p {
+      width: 400px !important;
+    }
   }
 }
 
@@ -291,6 +318,32 @@ html {
     justify-content: center;
     align-items: center;
   }
+
+  .project {
+    flex-direction: column;
+    width: 100%;
+
+    .projectImg {
+      width: 100% !important;
+      order: 1;
+    }
+
+    .projectTxt {
+      width: 100% !important;
+      order: 2;
+
+      h4 {
+        font-size: 30px !important;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 20px !important;
+        width: 100% !important;
+        font-weight: 300;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -305,5 +358,9 @@ html {
       height: 45px;
       border-radius: 22px;
     }
+  }
+
+  .projectImg {
+    height: 250px !important;
   }
 }

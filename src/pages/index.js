@@ -22,7 +22,7 @@ const IndexPage = () => {
 
       </Helmet>
 
-      <section className={style.heroSection}>
+      <section className={style.heroSection} id="home">
         <div className={style.heroContent}>
           <div className={style.heroTop}>
             <div className={style.navbar}>
@@ -52,20 +52,56 @@ const IndexPage = () => {
 
         </div>
       </section>
+
+      <section id={style.work}>
+        <div className={style.wrapper}>
+          <h3>Meine Projekte</h3>
+
+          <div className={style.projects}>
+            <div className={style.project}>
+              <div className={style.projectTxt}>
+                <h4>Projekt Titel</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <button>Mehr dazu</button>
+              </div>
+              <div className={style.projectImg}></div>
+            </div>
+
+            <div className={style.project}>
+              <div className={style.projectImg}></div>
+
+              <div className={style.projectTxt}>
+                <h4>Projekt Titel</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <button>Mehr dazu</button>
+              </div>
+            </div>
+
+            <div className={style.project}>
+              <div className={style.projectTxt}>
+                <h4>Projekt Titel</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <button>Mehr dazu</button>
+              </div>
+              <div className={style.projectImg}></div>
+            </div>
+
+            <div className={style.project}>
+              <div className={style.projectImg}></div>
+
+              <div className={style.projectTxt}>
+                <h4>Projekt Titel</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <button>Mehr dazu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
 
-function changeBackground() {
-  var currentTheme = document.documentElement.getAttribute("data-theme");
-
-  // Switch between `dark` and `light`
-  var switchToTheme = currentTheme === "dark" ? "light" : "dark"
-
-  // Set our currenet theme to the new one
-  document.documentElement.setAttribute("data-theme", switchToTheme);
-
-}
 
 
 
