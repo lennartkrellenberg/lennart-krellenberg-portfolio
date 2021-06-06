@@ -54,7 +54,7 @@ const IndexPage = () => {
       </section>
 
       <section id={style.work}>
-        <div className={style.wrapper}>
+        <div className="work">
           <h3>Meine Projekte</h3>
 
           <div className={style.projects}>
@@ -96,6 +96,21 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id={style.tools}>
+        <div id="tools">
+          <h3>Die Tools</h3>
+
+          <div className={style.toolsFlex}>
+            <div className={style.tool}></div>
+            <div className={style.tool}></div>
+            <div className={style.tool}></div>
+            <div className={style.tool}></div>
+
+          </div>
+
         </div>
       </section>
     </div>
