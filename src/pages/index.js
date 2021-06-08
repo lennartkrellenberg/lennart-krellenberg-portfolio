@@ -41,8 +41,8 @@ const IndexPage = () => {
 
 
           <div className={style.heroRight}>
-            <StaticImage className={style.person} src="../images/person.svg"
-
+            <StaticImage className={style.person} src="../images/god.png"
+              quality={100}
               alt="Person SVG"
               placeholder="none"
 
@@ -104,10 +104,10 @@ const IndexPage = () => {
           <h3>Die Tools</h3>
 
           <div className={style.toolsFlex}>
-            <div className={style.tool}></div>
-            <div className={style.tool}></div>
-            <div className={style.tool}></div>
-            <div className={style.tool}></div>
+            <div className={style.tool}><StaticImage src="../images/flutter.svg" color="#02569B" width={100}></StaticImage></div>
+            <div className={style.tool}><StaticImage src="../images/gatsby.svg" color="#02569B" width={100}></StaticImage></div>
+            <div className={style.tool}><StaticImage src="../images/github.svg" color="#02569B" width={100}></StaticImage></div>
+            <div className={style.tool}><StaticImage src="../images/firebase.svg" color="#02569B" width={100}></StaticImage></div>
 
           </div>
 

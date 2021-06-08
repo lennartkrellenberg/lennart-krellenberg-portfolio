@@ -6,7 +6,7 @@ import "../../style/global.module.scss"
 
 const Navigation = styled.nav`
   height: 120px;
-  width: 1600px;
+  width: 100%;
   display: flex;
   position: relative;
   justify-content: space-between;
