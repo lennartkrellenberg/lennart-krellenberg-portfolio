@@ -44,7 +44,7 @@ const Navbox = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: #292e34;
+  background-color: #121212;
   color: #fffff;
   justify-content: flex-end;
   align-items: center;

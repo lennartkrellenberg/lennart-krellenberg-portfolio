@@ -2,7 +2,6 @@ import * as React from "react"
 import * as style from "../style/global.module.scss"
 import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 import Navbar from "../components/navbar/Navbar"
 
 
@@ -33,7 +32,7 @@ const IndexPage = () => {
           <div className={style.heroLeft}>
             <h3>Hi, I'm Lennart <span role="img" aria-label="shake-hand">👋🏻</span></h3>
             <h2><span className={style.blue}>App</span> and <span className={style.pink}>Front-End</span> Developer</h2>
-            <div className={style.heroButtons}>
+            <div>
               <button className={style.btn1}>Projekte</button>
               <button className={style.btn2}>Kontakt</button>
             </div>
@@ -60,15 +59,16 @@ const IndexPage = () => {
           <div className={style.projects}>
             <div className={style.project}>
               <div className={style.projectTxt}>
-                <h4>Projekt Titel</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <button>Mehr dazu</button>
+                <h4>NFT Info Page</h4>
+                <p>Diese Webseite habe ich im Kunstunterricht erstellt. <br /> Sie zeigt, wie Künstler mit Hilfe von NFTs ihre Kunstwerke verkaufen können. <br /> Bei diesem Projekt habe ich mit Gatsby und Flexbox gearbeitet.   </p>
+                <button href="https://nftinfopagemain.gatsbyjs.io/" rel="noopener noreferrer" target="_blank">Mehr dazu</button>
               </div>
-              <div className={style.projectImg}></div>
+              <div className={style.projectImg}><StaticImage src="../images/nftImg.png" quality="100"></StaticImage>
+              </div>
             </div>
 
             <div className={style.project}>
-              <div className={style.projectImg}></div>
+              <div className={style.projectImg}><StaticImage src="../images/minimalImg.png" quality="100"></StaticImage></div>
 
               <div className={style.projectTxt}>
                 <h4>Projekt Titel</h4>
@@ -83,11 +83,12 @@ const IndexPage = () => {
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 <button>Mehr dazu</button>
               </div>
-              <div className={style.projectImg}></div>
+              <div className={style.projectImg}><StaticImage src="../images/leonImg.png" quality="100"></StaticImage>
+              </div>
             </div>
 
             <div className={style.project}>
-              <div className={style.projectImg}></div>
+              <div className={style.projectImg}><StaticImage src="../images/travlerImg.png" quality="100"></StaticImage></div>
 
               <div className={style.projectTxt}>
                 <h4>Projekt Titel</h4>

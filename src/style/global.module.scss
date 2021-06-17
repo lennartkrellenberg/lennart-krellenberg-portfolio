@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 :root {
-  --background-color: #292e34;
+  --background-color: #121212;
   --text-color: #fff;
 }
 
@@ -45,6 +45,7 @@ html {
 }
 
 .heroContent {
+  pointer-events: none;
   height: 100vh;
   width: 100%;
   display: grid;
@@ -116,8 +117,9 @@ html {
       }
 
       p {
+        font-family: "Poppins", sans-serif;
         font-size: 1.1rem;
-        width: 500px;
+        width: 700px;
       }
 
       button {
@@ -137,8 +139,7 @@ html {
     .projectImg {
       height: 350px;
       width: 700px;
-      background-color: black;
-      border-radius: 50px;
+      pointer-events: none;
     }
   }
 }
@@ -162,6 +163,7 @@ html {
   flex-wrap: wrap;
 
   .tool {
+    pointer-events: none;
     height: 230px;
     width: 245px;
     border-radius: 55px;
