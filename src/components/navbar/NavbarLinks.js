@@ -43,8 +43,10 @@ const NavbarLinks = () => {
   return (
     <>
       <NavItem to="#home">Home</NavItem>
+      <NavItem to="#aboutme">Über mich</NavItem>
       <NavItem to="#work">Work</NavItem>
-      <NavItem to="#contact">Contact</NavItem>
+      <NavItem to="#tools">Tools</NavItem>
+      <NavItem href="mailto:lennart@lennartkrellenberg.com">Contact</NavItem>
 
 
 
