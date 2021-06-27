@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
 :root {
   --background-color: #121212;
   --text-color: #fff;
@@ -30,6 +32,35 @@ html {
 
 .link:hover {
   text-decoration: underline;
+}
+
+.topic {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 35px !important;
+}
+
+.topic2 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-size: 25px !important;
+}
+.p1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+}
+
+.p2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+
+.buttonText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px !important;
 }
 
 .blue {
@@ -104,7 +135,25 @@ html {
   p {
     font-size: 1.3rem;
     font-weight: 400;
-    width: 50vw;
+  }
+}
+
+.aboutContent {
+  display: flex;
+  .aboutLeft {
+    flex-grow: 1;
+    width: 0;
+  }
+
+  .aboutRight {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    width: 0;
+
+    .me {
+      width: 20vw;
+    }
   }
 }
 
@@ -135,7 +184,6 @@ html {
 
       h4 {
         margin: 10px 0;
-        font-size: 1.8rem;
       }
 
       p {
@@ -155,6 +203,11 @@ html {
         font-size: 1.35rem;
         align-self: flex-start;
         margin-top: 60px;
+      }
+
+      button:hover {
+        background-color: #2b89ad;
+        border-color: #2b89ad;
       }
     }
 
@@ -199,7 +252,46 @@ html {
   }
 }
 
+.footer {
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+
+  .footerLink {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin: 0 5px;
+  }
+  .footerLink:hover {
+    color: #db3eb1;
+  }
+}
+
 @media (max-width: 800px) {
+  .aboutContent {
+    display: block;
+    width: 100%;
+  }
+
+  .aboutLeft {
+    width: 100%;
+
+    p {
+      width: 90vw;
+    }
+  }
+  .aboutRight {
+    display: none;
+
+    .me {
+      display: none;
+    }
+  }
+
   .wrapper {
     margin: 0 20px;
   }
@@ -254,8 +346,8 @@ html {
   justify-content: center;
 
   h5 {
-    font-size: 1.5rem;
-    font-family: "poppins";
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
   }
 
   h2 {
@@ -279,9 +371,19 @@ html {
     margin-right: 50px;
   }
 
+  .btn1:hover {
+    background-color: #2b89ad;
+    border-color: #2b89ad;
+  }
+
   .btn2 {
     background-color: #db3eb1;
     border-color: #db3eb1;
+  }
+
+  .btn2:hover {
+    background-color: #ad368d;
+    border-color: #ad368d;
   }
 }
 
@@ -371,7 +473,7 @@ html {
     button {
       width: 170px;
       height: 50px;
-      border-radius: 22px;
+      border-radius: 10px;
     }
   }
 
@@ -397,15 +499,8 @@ html {
       width: 100% !important;
       order: 2;
 
-      h4 {
-        font-size: 30px !important;
-        font-weight: 700;
-      }
-
       p {
-        font-size: 20px !important;
         width: 100% !important;
-        font-weight: 300;
       }
     }
   }
@@ -416,8 +511,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     .tool {
-      width: 170px;
-      height: 170px;
+      width: 150px;
+      height: 150px;
       border-radius: 30px;
     }
   }
@@ -433,7 +528,7 @@ html {
     button {
       width: 140px;
       height: 45px;
-      border-radius: 22px;
+      border-radius: 12px;
     }
   }
 

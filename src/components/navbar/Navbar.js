@@ -50,20 +50,13 @@ const Navbox = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    background-color: rgba(12,12,12,1);
-
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    justify-content: flex-start;
-    padding-top: 10vh;
-    transition: all 0.3s ease-in;
-    top: 12vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    display: none;
   }
 `
 
 const Hamburger = styled.div`
+display: none;
+
   background-color: #fff;
   width: 30px;
   height: 3px;
