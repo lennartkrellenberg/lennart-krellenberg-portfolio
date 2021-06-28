@@ -39,7 +39,8 @@ const IndexPage = () => {
   return (
     <div>
       <Helmet>
-
+        <title>Lennart Krellenberg</title>
+        <meta name="description" content="Self-taught front-end and app developer." />
 
 
 
