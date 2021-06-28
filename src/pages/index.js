@@ -174,7 +174,6 @@ const IndexPage = () => {
 
         <section className={style.footer}>
           <Link className={style.footerLink} to="/impressum">Impressum</Link>
-          <Link className={style.footerLink} to="/datenschutz">Datenschutzerklärung</Link>
 
         </section>
 
