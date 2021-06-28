@@ -1,0 +1,56 @@
+.imprint {
+  height: 100%;
+  background-color: #121212;
+}
+
+a {
+  color: #db3eb1;
+}
+
+a:hover {
+  color: #a53487;
+}
+
+.imprint-content {
+  padding: 15px;
+}
+
+.imprint-content .topic {
+  font-size: 2rem;
+}
+.imprint-content h1 {
+  margin-bottom: 25px;
+  font-size: 1.7rem;
+}
+
+.imprint-content h2 {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.imprint-content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.imprint-content p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.imprint-content ul {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.imprint-link {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #db3eb1;
+}
+
+.imprint-link:hover {
+  color: #a53487;
+}
