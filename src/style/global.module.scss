@@ -21,7 +21,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -76,15 +76,14 @@ html {
   height: 100vh;
 }
 .heroSection {
+  overflow: hidden;
+
   height: 100vh;
 }
 
 .heroContent {
   height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 150px 1fr;
 }
 
 .heroRight {
@@ -127,7 +126,7 @@ html {
   min-height: 60vh;
 
   h3 {
-    margin-top: 40px;
+    padding-top: 40px;
     font-size: 2.5rem;
     margin-bottom: 80px;
   }
@@ -162,6 +161,7 @@ html {
   min-height: 100vh;
 
   h3 {
+    padding-top: 80px;
     font-size: 2.5rem;
     margin-bottom: 80px;
   }

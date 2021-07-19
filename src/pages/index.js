@@ -10,6 +10,8 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from "gatsby"
+import "../style/tailwind.css"
+import Logo from "../components/navbar/Logo"
 
 
 
@@ -53,31 +55,55 @@ const IndexPage = () => {
       >
         <div className={style.bgOverlay}>
 
-          <section className={style.heroSection, style.wrapper} id="home">
+          <section className={style.heroSection} id="home">
             <div className={style.heroContent}>
-              <div className={style.heroTop}>
-                <div className={style.navbar}>
-                  <Navbar></Navbar>
+              <div>
+                <nav className="nav w-screen mx-auto flex flex-row justify-between  text-white fixed p-5  h-30 z-20 self-center ">
+                  <div className=" container mx-auto flex flex-row justify-between self-center">
+                    <div className=" flex"><Logo></Logo></div>
 
+                    <div className="h-20 items-center flex hidden lg:flex">
+                      <Link className="p-5 text-lg hover:text-pink-500" to="#home">Home</Link>
+                      <Link className="p-5 text-lg hover:text-pink-500" to="#aboutme">Über Mich</Link>
+                      <Link className="p-5 text-lg hover:text-pink-500" to="#work">Work</Link>
+                      <Link className="p-5 text-lg hover:text-pink-500" to="#tools">Tools</Link>
+                      <a className="p-5 text-lg hover:text-pink-500" href="mailto:lennart@lennartkrellenberg.com">Contact</a>
+                    </div>
+                  </div>
+                  <div className=" bg-pink-500 fixed bottom-4 right-4 rounded-full   z-50 h-17 w-17   lg:hidden " onClick={toggleMenu} onKeyDown={toggleMenu} role="button" tabIndex={0}>
+
+                    <div class="menu-btn">
+                      <div class="menu-btn__burger"></div>
+                    </div>
+
+                  </div>
+
+                  <div className="bg-bgblack-500 text-3xl fixed flex flex-col py-4 justify-center items-center inset-0 hidden js-toggle">
+                    <Link className="p-5 text-lg hover:text-pink-500" to="#home">Home</Link>
+                    <Link className="p-5 text-lg hover:text-pink-500" to="#aboutme">Über Mich</Link>
+                    <Link className="p-5 text-lg hover:text-pink-500" to="#work">Work</Link>
+                    <Link className="p-5 text-lg hover:text-pink-500" to="#tools">Tools</Link>
+                    <a className="p-5 text-lg hover:text-pink-500" href="mailto:lennart@lennartkrellenberg.com">Contact</a>
+
+
+                  </div>
+
+                </nav>
+
+              </div>
+
+              <div className={style.wrapper}>
+                <div className="flex w-screen h-screen ">
+                  <div className={style.heroLeft}>
+                    <h5>Hi, I'm Lennart <span role="img" aria-label="shake-hand">👋🏻</span></h5>
+                    <h2><span className={style.blue}>App</span> and <span className={style.pink}>Front-End</span> Developer</h2>
+                    <div>
+                      <a href="#work"><button className={style.btn1}>Projekte</button></a>
+                      <a href="mailto:lennart@lennartkrellenberg.com"><button className={style.btn2}>Kontakt</button></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-
-              <div className={style.heroLeft}>
-                <h5>Hi, I'm Lennart <span role="img" aria-label="shake-hand">👋🏻</span></h5>
-                <h2><span className={style.blue}>App</span> and <span className={style.pink}>Front-End</span> Developer</h2>
-                <div>
-                  <a href="#work"><button className={style.btn1}>Projekte</button></a>
-                  <a href="mailto:lennart@lennartkrellenberg.com"><button className={style.btn2}>Kontakt</button></a>
-                </div>
-              </div>
-
-
-              <div className={style.heroRight}>
-
-
-              </div>
-
             </div>
           </section>
         </div>
@@ -189,3 +215,33 @@ const IndexPage = () => {
 
 
 export default IndexPage
+
+let menuOpen = false;
+
+function toggleMenu() {
+  const navToggle = document.getElementsByClassName("js-toggle");
+  const menuBtn = document.querySelector('.menu-btn');
+  if (!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+  for (let i = 0; i < navToggle.length; i++) {
+    navToggle.item(i).classList.toggle("hidden");
+
+
+
+  }
+
+
+}
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY >= 400) {
+    document.querySelector("nav").classList.add("bg-bgblack-500");
+  } else {
+    document.querySelector("nav").classList.remove("bg-bgblack-500");
+  }
+})
