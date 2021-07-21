@@ -12,6 +12,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from "gatsby"
 import "../style/tailwind.css"
 import Logo from "../components/navbar/Logo"
+import Scroll from "../components/Scroll"
 
 
 
@@ -36,10 +37,15 @@ const IndexPage = () => {
   // Use like this:
   const bgImage = data.background.childImageSharp.fluid
 
+  let menuOpen = false;
+
+
+
+
 
 
   return (
-    <div>
+    <div onScroll>
       <Helmet>
         <title>Lennart Krellenberg</title>
         <meta name="description" content="Self-taught front-end and app developer." />
@@ -47,6 +53,7 @@ const IndexPage = () => {
 
 
       </Helmet>
+      <Scroll />
       <BackgroundImage
         Tag="section"
         fluid={bgImage}
@@ -70,7 +77,47 @@ const IndexPage = () => {
                       <a className="p-5 text-lg hover:text-pink-500" href="mailto:lennart@lennartkrellenberg.com">Contact</a>
                     </div>
                   </div>
-                  <div className=" bg-pink-500 fixed bottom-4 right-4 rounded-full   z-50 h-17 w-17   lg:hidden " onClick={toggleMenu} onKeyDown={toggleMenu} role="button" tabIndex={0}>
+                  <div className=" bg-pink-500 fixed bottom-4 right-4 rounded-full   z-50 h-17 w-17   lg:hidden " onClick={() => {
+
+                    const navToggle = document.getElementsByClassName("js-toggle");
+                    const menuBtn = document.querySelector('.menu-btn');
+                    if (!menuOpen) {
+                      menuBtn.classList.add('open');
+                      menuOpen = true;
+                    } else {
+                      menuBtn.classList.remove('open');
+                      menuOpen = false;
+                    }
+                    for (let i = 0; i < navToggle.length; i++) {
+                      navToggle.item(i).classList.toggle("hidden");
+
+
+
+                    }
+
+
+
+                  }} onKeyDown={() => {
+
+                    const navToggle = document.getElementsByClassName("js-toggle");
+                    const menuBtn = document.querySelector('.menu-btn');
+                    if (!menuOpen) {
+                      menuBtn.classList.add('open');
+                      menuOpen = true;
+                    } else {
+                      menuBtn.classList.remove('open');
+                      menuOpen = false;
+                    }
+                    for (let i = 0; i < navToggle.length; i++) {
+                      navToggle.item(i).classList.toggle("hidden");
+
+
+
+                    }
+
+
+                  }
+                  } role="button" tabIndex={0}>
 
                     <div class="menu-btn">
                       <div class="menu-btn__burger"></div>
@@ -216,32 +263,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-let menuOpen = false;
 
-function toggleMenu() {
-  const navToggle = document.getElementsByClassName("js-toggle");
-  const menuBtn = document.querySelector('.menu-btn');
-  if (!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-  }
-  for (let i = 0; i < navToggle.length; i++) {
-    navToggle.item(i).classList.toggle("hidden");
-
-
-
-  }
-
-
-}
-
-window.addEventListener("scroll", (e) => {
-  if (window.scrollY >= 400) {
-    document.querySelector("nav").classList.add("bg-bgblack-500");
-  } else {
-    document.querySelector("nav").classList.remove("bg-bgblack-500");
-  }
-})
